@@ -1,0 +1,35 @@
+#name{
+    margin-top: 12%;
+    margin-left: 28%;
+    font-size: 700%;
+    font-weight: 1000%;
+    text-shadow: #3d0486;
+}
+p{
+    position: absolute;
+}
+#tic{
+    color: #f5c769;
+}
+#tac{
+    padding-left: 12%;
+    color: #67128f;
+}
+#toe{
+    padding-left: 26.5%;
+    color: #b1eff3;
+}
+input{
+    padding: 10px 40px;
+    position: absolute;
+    text-align: center;
+    color: #3d0486;
+    font-size: 20%;
+    font-weight: 900;
+    margin-top: 20%;
+    margin-left: 13.5%;
+    border-radius: 30px;
+    border-style: none;
+    box-shadow: 10px 10px 5px #31184f;
+    cursor: pointer;
+}

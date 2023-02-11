@@ -1,1 +1,46 @@
-<p>gamepage works!</p>
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+    <h1 id="head"><b style="color: #f5c769;">TIC</b><b style="color: #3d0656;">TAC</b><b style="color: #b1eff3;">TOE</b></h1>
+<!--   
+    <h2 id="opts">Start With</h2>
+  
+    <div id="top" data-toggle="buttons">
+      <label class="cross" [class.active]="startWith.value === true">
+        <input
+          [value]="true"
+          type="radio"
+          name="options"
+          id="option1"
+          [formControl]="startWith"
+        >
+        <b style="font-size: large;">{{p1}}</b>
+      </label>
+      <label class="circle" [class.active]="startWith.value === false">
+        <input
+          [value]="false"
+          type="radio"
+          name="options"
+          id="option2"
+          [formControl]="startWith"
+        />
+        <b>{{p2}}</b>
+      </label>
+    </div> -->
+    <table>
+      <tr *ngFor="let board_row of board; let x = index">
+        <td *ngFor="let cell of board_row; let y = index" (click)="onclick(x, y)">
+          <p id="cell">{{ cell }}</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="winner" *ngIf = "playerWon()">
+    <h1>Congratulations</h1>
+    <P id="winnerName">{{winner}}</P>
+    <h2 id="thanks">Thank you {{p1}} and {{p2}} for Playing</h2>
+    <div>
+      <button id="winnerButton" (click) = "newGame()">NewGame</button>
+    </div>
+  </div>
+  
